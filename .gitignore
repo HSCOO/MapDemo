@@ -1,0 +1,49 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+
+# CocoaPods
+Pods/
+*.lock
+*.xcconfig
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
+
+# Swift Package Manager
+Package.resolved
+
+# AppCode
+.idea/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Xcode
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+
+# Carthage
+Carthage/Build/
+
+# SwiftUI
+.build/
+
+# Xcode
+xcuserdata/
+
