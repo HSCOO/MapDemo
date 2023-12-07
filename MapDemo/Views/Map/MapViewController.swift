@@ -205,7 +205,9 @@ extension MapViewController:CLLocationManagerDelegate{
         if startLocation == nil {
             startLocation = locations.first
         } else if let latestLocation = locations.last {
-            let distance = startLocation?.distance(from: latestLocation) ?? 0.0
+            var distance = startLocation?.distance(from: latestLocation) ?? 0.0
+            // 不动的时候有可能有轻微的波动，减少无效距离
+            distance = distance > 1 ? distance : 0
             print("Distance traveled: \(distance) meters")
             navigationModel.distance += Int(distance)
             startLocation = latestLocation
