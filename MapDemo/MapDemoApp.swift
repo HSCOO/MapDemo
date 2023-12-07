@@ -19,15 +19,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct MapDemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
-    init() {
-        let config = URLSessionConfiguration.ephemeral
-        config.waitsForConnectivity = true
-    }
+    @StateObject var navigationModel = NavigationModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(navigationModel)
         }
     }
 }
